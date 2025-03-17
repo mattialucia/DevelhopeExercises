@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Develhope Exercise 6 - SVG e Audio</title>
+    <style>
+        body {
+            margin: 50;
+            padding: 20px 100px;
+            font-family: system-ui, sans-serif;
+            color: black;
+            background: linear-gradient(90deg,rgb(0, 133, 205) 0%, rgb(0, 67, 103) 100%);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bolder;
+            background-color: rgba(211, 211, 211, 0.664);
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            font-style: italic;
+            color: rgb(0, 195, 255);
+            background-color: rgb(0, 92, 121);
+        }
+
+        .face {
+            cursor: pointer;
+            text-align: center;
+            display: flex;
+            margin: auto;
+            border-radius: 15px;
+            transition: all 200ms ease;
+        }
+
+        .face:hover {
+            transform: scale(1.2);
+        }
+
+        .audio {
+            display: flex;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Benvenuto nella pagina SVG e Audio</h1>
+
+    <!-- SVG incorporato direttamente nel codice HTML -->
+    <p>Immagine SVG incorporata nel codice HTML:</p>
+    <svg class="face" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="80" stroke="black" stroke-width="3" fill="gray" />
+        <circle cx="70" cy="80" r="10" fill="white" />
+        <circle cx="130" cy="80" r="10" fill="white" />
+        <circle cx="70" cy="80" r="5" fill="black" />
+        <circle cx="130" cy="80" r="5" fill="black" />
+        <path d="M 70 130 Q 100 150 130 130" stroke="black" stroke-width="3" fill="none" />
+        <path d="M 60 60 Q 100 20 140 60" stroke="black" stroke-width="3" fill="none" />
+    </svg>
+
+    <!-- SVG come immagine esterna -->
+    <p>SVG come immagine esterna:</p>
+    <img class="face" src="/files/image.svg" alt="Descrizione dell'immagine SVG" />
+
+    <!-- Elemento audio -->
+    <p>Elemento audio:</p>
+    <audio class="audio" controls autoplay>
+        <source src="/files//audio.mp3" type="audio/mpeg" />
+        Il tuo browser non supporta l'elemento audio.
+    </audio>
+</body>
+
+</html>

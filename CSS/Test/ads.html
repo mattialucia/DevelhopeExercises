@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <style>
+      .float {
+        border: 2px solid red;
+        margin: 20px;
+        padding: 10px;
+      }
+      .float img {
+        float: right;
+        border: 2px solid rgb(255, 0, 0);
+        border-radius: 10px;
+      }
+
+      .fixed div {
+        position: fixed;
+        left: 50%;
+        top: 94%;
+        width: 350px;
+        height: 80px;
+        transform: translate(-50%, -50%);
+        background: #c0c0c0;
+        border-radius: 10px;
+        border: 2px solid black;
+      }
+
+      .relative {
+        border: 2px solid rgb(0, 200, 207);
+        position: relative;
+        margin: 20px;
+        margin-top: 50px;
+        padding: 10px;
+
+      }
+
+      .absolute {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid rgb(207, 176, 0);
+        border-radius: 10px;
+      }
+
+      p {
+        margin: 0 auto;
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      .fixed p {
+        margin-left: 10px;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+      }
+
+      #ads {
+        font-size: 20px;
+        font-weight: 900;
+        color: rgb(231, 0, 0);
+        padding-top: 5px;
+      }
+
+      #x {
+        float: right;
+        margin: 0;
+        padding-right: 8px;
+        font-size: 20px;
+        cursor: pointer;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="float">
+      <img src="https://picsum.photos/200/200" alt="random image" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
+        delectus veniam maxime sit, numquam blanditiis suscipit enim neque
+        doloremque autem error ut dignissimos nam eius nihil explicabo
+        distinctio inventore? Possimus. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Mollitia, delectus veniam maxime sit, numquam
+        blanditiis suscipit enim neque doloremque autem error ut dignissimos nam
+        eius nihil explicabo distinctio inventore? Possimus. Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Mollitia, delectus veniam maxime
+        sit, numquam blanditiis suscipit enim neque doloremque autem error ut
+        dignissimos nam eius nihil explicabo distinctio inventore? Possimus.
+      </p>
+    </div>
+
+    <div class="fixed">
+      <div>
+        <p id="x">x</p>
+        <p id="ads">PUBBLICITA'</p>
+        <p>Hai vinto un iPhone 16 Pro Max!</p>
+        <p>Non perdere questa occasione!</p>
+        </p>
+      </div>
+    </div>
+    
+    <br />
+
+    <div class="relative">
+        <img class="absolute" src="https://picsum.photos/200/200" alt="random image" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
+        delectus veniam maxime sit, numquam blanditiis suscipit enim neque
+        doloremque autem error ut dignissimos nam eius nihil explicabo
+        distinctio inventore? Possimus. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Mollitia, delectus veniam maxime sit, numquam
+        blanditiis suscipit enim neque doloremque autem error ut dignissimos nam
+        eius nihil explicabo distinctio inventore? Possimus. Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Mollitia, delectus veniam maxime
+        sit, numquam blanditiis suscipit enim neque doloremque autem error ut
+        dignissimos nam eius nihil explicabo distinctio inventore? Possimus.
+      </p>
+    </div>
+  </body>
+</html>

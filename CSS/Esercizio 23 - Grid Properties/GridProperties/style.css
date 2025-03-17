@@ -1,0 +1,94 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  background-color: rgb(227, 253, 255);
+  width: 60em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+section {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  margin: 1em;
+}
+
+#green {
+  background-color: #8ffda7;
+  color: #467c51;
+  border: 3px solid #467c51;
+  grid-column: 1 / span 3;
+  order: 0;
+}
+
+#orange {
+  background-color: #ffc788;
+  color: #7c6142;
+  border: 3px solid #7c6142;
+  grid-row: 3;
+  grid-column: 1 / span 2;
+  order: 4;
+}
+
+#yellow {
+  background-color: #ffff92;
+  color: #929252;
+  border: 3px solid #a0a05b;
+  order: 1;
+}
+
+#red {
+  background-color: #ff919c;
+  color: #81494f;
+  border: 3px solid #81494f;
+  order: 2;
+}
+
+#blue {
+  background-color: #98d2ff;
+  color: #516f86;
+  border: 3px solid #516f86;
+  grid-column: 3;
+  grid-row: 2 / span 2;
+  order: 3;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  justify-content: center;
+  border: inherit;
+  border-style: dashed;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+li {
+  display: block;
+  background-color: rgb(255, 255, 255);
+  border: inherit;
+  border-style: solid;
+  text-align: center;
+  padding: 1em;
+  margin: 1em;
+}
+
+/* 
+section.#red ul li {
+  border: 3px solid #81494f;
+} 
+
+section.#yellow ul li {
+  border: 3px solid #81494f;
+} 
+*/

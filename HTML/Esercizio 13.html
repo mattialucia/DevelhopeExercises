@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Develhope Exercise 13 - Blog Minimalista </title>
+    <style>
+        header {
+            background-color: #f1f1f1;
+            padding: 18px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin: 20px;
+            padding: 5px;
+            background-color: #f1f1f1;
+            text-align: center;
+            border-style: solid;
+            border-radius: 12px;
+            border-width: 2px;
+            border-color: rgb(90, 90, 90);
+            transition: all 200ms ease;
+        }
+
+        section:hover {
+            background-color: #dddddd;
+            border-color: rgb(50, 50, 50);
+            transform: scale(0.98);
+        }
+
+        footer {
+            background-color: rgb(177, 177, 177);
+            padding: 10px;
+            text-align: center;
+            border-style: dashed;
+            border-width: 2px;
+            border-color: rgb(90, 90, 90);
+            color:#cf0000;
+            text-shadow: 3px 3px 10px #5a5a5ac5;
+        }
+
+        #img1 {
+            width: 680px;
+            height: fit-content;
+            border-radius: 12px;
+            border-color: rgb(90, 90, 90);
+            border-style: solid;
+            border-width: 3px;
+            transition: all 200ms ease;
+        }
+
+        #img1:hover{
+            background-color: #dddddd;
+            transform: scale(1.05);
+        }
+
+        h1{
+            color: rgb(50, 50, 50);
+            text-shadow: 3px 3px 10px #5a5a5ac5;
+            font-size: 35px;
+        }
+
+        h2{
+            color: rgb(50, 50, 50);
+            text-shadow: 3px 3px 10px #5a5a5ac5;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        h3{
+            color: rgb(50, 50, 50);
+            font-size: 20px;
+        }
+
+        p{
+            color: rgb(50, 50, 50);
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gli sfondi minimal sono i migliori?</h1>
+        <p>Gli sfondi minimal sono i più fighi. In basso ne hai una prova!</p>
+        <img id="img1" src='peakpx.jpg' alt="Immagine dell'articolo">
+    </header>
+    <main>
+        <hr />
+        <section>
+            <h2>Minimalisti.</h2>
+            <p>Sono minimalisti.</p>
+        </section>
+        <section>
+            <h2>Belli.</h2>
+            <p>Sono i più belli.</p>
+        </section>
+        <section>
+            <h2>Per tutti.</h2>
+            <p>C'è ne per di tutti i tipi.</p>
+        </section>
+        <hr />
+    </main>
+    <footer>
+        <h3>Se vuoi ricevere aggiornamenti sulla newsletter, inserisci la tua email qui sotto.</h3>
+        <form>
+            <label for="email"></label>
+            <input type="email" id="email" name="email" placeholder="Inserisci qui la tua email" required /> <input type="submit" value="Invia" /><br /><br />
+        </form>
+    </footer>
+</body>
+</html>

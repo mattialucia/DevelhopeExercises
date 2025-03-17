@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Responsiva</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: aliceblue;
+            margin: 0;
+        }
+        nav {
+            background-color: #333;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            border: 2px solid #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: all 300ms ease;
+        }
+        nav a:hover {
+            background-color: #00a0eb;
+            color: rgb(39, 39, 39);
+            border: 2px solid #005b77;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li {
+            float: left;
+            transition: all 300ms ease;
+        }
+        .search-container {
+            float: right;
+            padding: 6px;
+            margin: 8px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+        #Disabled {
+            pointer-events: none;
+            cursor: default;
+            background-color: #333;
+            color: #f2f2f2;
+            border: 2px solid #333;
+        }
+        #Dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .icon {
+            display: none;
+        }
+        @media screen and (max-width: 768px) {
+            nav a {
+                display: flex;
+                flex-direction: column;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a id="Navbar" href="esercizio 7.html">Navbar</a></li>
+            <li><a href="Esercizio 3.html">Home</a></li>
+            <li><a href="Esercizio 4.html">Link</a></li>
+            <li><a id="Dropdown" href="Esercizio 5.html">Dropdown ▼</a></li>
+            <li><a id="Disabled" href="esercizio 6.html">Disabled</a></li>
+            <form class="search-container" name="Search" method="post" action="/search">
+                <label>
+                    <input 
+                        type="search"
+                        autocomplete="on"
+                        placeholder="Search.."
+                        name="keyword"
+                        required
+                        maxlength="40"
+                        height="30px"
+                    />
+                </label>
+                <input type="submit" value="Search" />
+            </form>
+        </ul>
+    </nav>
+</body>
+</html>

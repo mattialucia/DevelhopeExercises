@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Develhope Exercise 9 - Modulo di Registrazione Utente</title>
+</head>
+<body>
+    <h1>Modulo di Registrazione Utente</h1>
+    <form>
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome_completo" placeholder="Scrivi nome e cognome"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Scrivi indirizzo email"required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Scrivi la password" required><br><br>
+
+        <label for="data_nascita">Data di Nascita:</label>
+        <input type="date" id="data_nascita" name="data_nascita"><br><br>
+
+        <label for="genere"> Genere:</label>
+        <input type="radio" id="maschio" name="genere" value="maschio">
+        <label for="maschio">Maschio</label>
+        <input type="radio" id="femmina" name="genere" value="femmina">
+        <label for="femmina">Femmina</label>
+        <input type="radio" id="altro" name="genere" value="altro">
+        <label for="altro">Altro</label><br><br>
+
+        <label for="colore">Colore Preferito:</label>
+        <input type="color" id="colore" name="colore_preferito"><br><br>
+
+        <label for="lingue">Lingue Parlate:</label>
+        <select id="lingue" name="lingue_parlate" multiple>
+            <option value="italiano" selected>Italiano</option>
+            <option value="inglese">Inglese</option>
+            <option value="francese">Francese</option>
+            <option value="spagnolo">Spagnolo</option>
+        </select><br><br>
+
+        <label for="descrizione">Descrizione Personale:</label>
+        <textarea id="descrizione" name="descrizione_personale" rows="4" cols="30" placeholder="Scrivi la tua bio"></textarea><br><br>
+
+        <input type="submit" value="Invia">
+    </form>
+</body>
+</html>
