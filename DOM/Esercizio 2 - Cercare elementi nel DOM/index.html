@@ -23,5 +23,18 @@ Considerando la seguente pagina HTML:
       <li id="elemento-2">Elemento 2</li>
       <li id="elemento-3">Elemento 3</li>
     </ul>
+    <script>
+      // 1) Cerca tutti gli elementi con classe "paragrafo".
+      const paragrafo = document.getElementsByClassName("paragrafo")
+      console.log('1) Tutti gli elementi con classe "paragrafo":', paragrafo)
+
+      // 2) Cerca l' elemento con id "elemento-3".
+      const elemento3 = document.getElementById('elemento-3')
+      console.log("2) Cerca l' elemento con id elemento-3:", elemento3)
+
+      // 3) Cerca tutti gli elementi h2 della pagina.
+      const h2 = document.getElementsByTagName('h2')
+      console.log("3) Cerca tutti gli elementi h2 della pagina:", h2)
+    </script>
   </body>
 </html>

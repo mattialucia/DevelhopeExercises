@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li class=“item”>Elemento 1</li>
+        <li class=“item”>Elemento 2</li>
+      </ul>
+      <button>Aggiungi Elemento</button>
+      <script>
+        const ul = document.querySelector("ul#list")
+
+        const li = document.getElementsByClassName("item")[0]
+        const li2 = ul.children[0]
+        
+        const button = document.getElementsByTagName("button")[0]
+        const button2 = document.querySelector("ul#list+button") //selezioniamo il button che segue la lista
+        const button3 = ul.nextElementSibling
+      </script>
+</body>
+</html>
