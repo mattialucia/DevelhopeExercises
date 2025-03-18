@@ -25,12 +25,16 @@ Considerando la seguente pagina HTML:
     </ul>
     <script>
       // 1) Cerca tutti gli elementi con classe "paragrafo".
-      const paragrafo = document.getElementsByClassName("paragrafo")
+      const paragrafo = document.querySelectorAll("p.paragrafo")
+      // const paragrafo2 = document.getElementsByClassName("paragrafo")
       console.log('1) Tutti gli elementi con classe "paragrafo":', paragrafo)
 
       // 2) Cerca l' elemento con id "elemento-3".
       const elemento3 = document.getElementById('elemento-3')
       console.log("2) Cerca l' elemento con id elemento-3:", elemento3)
+      // const ul = document.querySelector("ul");
+      // const elemento = ul.querySelectorAll("li#elemento-3")
+      // console.log("2) Cerca l' elemento con id elemento-3:", elemento)
 
       // 3) Cerca tutti gli elementi h2 della pagina.
       const h2 = document.getElementsByTagName('h2')
