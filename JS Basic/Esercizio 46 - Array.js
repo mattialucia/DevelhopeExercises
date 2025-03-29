@@ -37,7 +37,7 @@ for (let i = 0; i < students.length; i++) {
 }
 
 console.log("\nPer gli studenti con nome minore e uguale a 3, crea un nuovo oggetto modificandone il nome:");
-// Ciclo for per gli studenti con nome minore e uguale a 3, crea un nuovo oggetto modificandone il nome
+// Ciclo for per gli studenti con la lunghezza del nome minore o uguale a 3, creando un nuovo oggetto modificandone il nome
 for (let i = 0; i < students.length; i++) {
   if(students[i].name.length <= 3){
     let studentClone = Object.assign({}, students[i])
