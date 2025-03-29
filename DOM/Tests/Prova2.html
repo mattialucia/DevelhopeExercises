@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card {
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+      }
+      #container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container"></div>
+
+    <script>
+      fetch("https://api.sampleapis.com/beers/ale")
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+          data.forEach((value) => {
+            const carta = document.createElement("div");
+            carta.classList.add("card");
+
+            const paragrafo = document.createElement("span");
+            paragrafo.innerText = value.name;
+
+            const immagine = document.createElement("img");
+            immagine.setAttribute("src", value.image);
+            immagine.style.width = "64px";
+
+            const prezzo = document.createElement("span");
+            prezzo.innerText = value.price;
+
+            carta.appendChild(paragrafo);
+            carta.appendChild(immagine);
+            carta.appendChild(prezzo);
+            const container = document.getElementById("container");
+            container.appendChild(carta);
+          });
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    </script>
+  </body>
+</html>
