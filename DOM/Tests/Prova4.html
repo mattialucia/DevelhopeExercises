@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      background-color: lightseagreen;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: 5px;
+      border: 2px solid black;
+      padding: 10px;
+      background-color: lightblue;
+    }
+
+    .h3 {
+      font-size: 24px;
+      color: darkblue;
+    }
+
+    #firstName {
+      color: darkblue;
+      border: 2px solid darkblue;
+    }
+
+    #surname {
+      color: darkcyan;
+      border: 2px solid darkcyan;
+    }
+
+    #email {
+      color: darkmagenta;
+      border: 2px solid darkmagenta;
+    }
+
+    #pwd {
+      color: darkred;
+      border: 2px solid darkred;
+    }
+
+    div{
+      color: azure;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  </style>
+  <body>
+    <h3 class="h3">Registrazione utente:</h3>
+    <form id="formRegister">
+      <label>Inserisci il tuo nome:</label>
+      <input type="text" required placeholder="Mario" id="firstName" /><br />
+      <label>Inserisci il tuo cognome:</label>
+      <input type="text" required placeholder="Rossi" id="surname" /><br />
+      <label>Inserisci la tua email:</label>
+      <input
+        type="email"
+        required
+        placeholder="mariorossi@gmail.com"
+        id="email"
+      /><br />
+      <label>Inserisci la tua password:</label>
+      <input type="text" required placeholder="Password" id="pwd" /><br />
+      <button type="submit" id="button">Registrati</button><br />
+    </form>
+    <div></div>
+    <script>
+      const button = document.querySelector("button");
+      button.addEventListener("click", () => {
+        event.preventDefault();
+        const firstName = document.getElementById('firstName');
+        const surname = document.getElementById('surname');
+        const email = document.getElementById('email');
+        const pwd = document.getElementById('pwd');
+        console.log("Stampa elementi:\n", firstName, surname, email, pwd);
+        console.log(`Stampa valori:\n1) Nome: ${firstName.value}\n2) Cognome: ${surname.value}\n3) Email: ${email.value}\n4) Password: ${pwd.value}`);
+
+        const user = { 
+          firstName: firstName.value, 
+          surname: surname.value, 
+          email: email.value, 
+          pwd: pwd.value
+        };
+        console.log("Oggetto user:", user);
+        const userJSON = JSON.stringify(user);
+        const data = localStorage.setItem("user", userJSON);
+
+        const h3 = document.querySelector('h3');
+        h3.innerText = `Benvenuto ${firstName.value} ${surname.value}.`;
+
+
+        const p = document.createElement('p');
+        p.innerText = 'Registrazione avvenuta con successo!';
+        const div = document.querySelector('div');
+        div.appendChild(p);
+
+        firstName.value = "";
+        surname.value = "";
+        email.value = "";
+        pwd.value = "";
+      });
+    </script>
+  </body>
+</html>

@@ -3,14 +3,14 @@ function createPersonObject(event) {
   // Recupero i valori di ciascun campo di input
   const firstName = document.getElementById("firstName").value;
   const lastName = document.getElementById("lastName").value;
-  const age = document.getElementById("age").value;
+  const age = document.getElementsByClassName("age").value;
 
   // Creo l'oggetto person con i valori recuperati in input
   const person = { firstName: firstName, lastName: lastName, age: age };
   console.log(
     "Valori recuperati correttamente, ecco l'oggetto person:\n",
     person
-  );
+  )
 
   // Converto l'oggetto in formato JSON
   const personJSON = JSON.stringify(person);

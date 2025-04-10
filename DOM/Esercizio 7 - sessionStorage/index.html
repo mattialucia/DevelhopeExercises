@@ -56,6 +56,7 @@ Lo scopo di questo task è di salvare tutti i dati di un form nel session storag
       const button = document.querySelector("button")
 
       button.addEventListener("click", () => {
+          event.preventDefault()
           span.innerText = firstname.value
           sessionStorage.setItem("email", email.value)
           sessionStorage.setItem("firstname", firstname.value)
