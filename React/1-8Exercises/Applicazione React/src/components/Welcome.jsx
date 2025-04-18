@@ -12,7 +12,7 @@ const Welcome = ({ name = "user", age }) => {
             {age > 18 && age < 65 && <Age age={age} />}
             {age > 18 && name === "John" && <Age age={age} />}
 
-            <p><Message age={age} /></p>
+            <Message age={age} />
         </div>
     );
 };

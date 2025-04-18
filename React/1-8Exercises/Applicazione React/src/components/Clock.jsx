@@ -1,8 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const Clock = () => {
   // Stato per memorizzare l'ora corrente.
-  const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
+  const [currentTime, setCurrentTime] = useState(
+    new Date().toLocaleTimeString()
+  );
 
   // Aggiornamento dell'orario ogni secondo usando useEffect.
   useEffect(() => {
@@ -14,9 +16,7 @@ const Clock = () => {
     return () => clearInterval(timer);
   }, []);
 
-  return (
-    <h2>Ora corrente: {currentTime}</h2>
-  );
+  return <h2>{currentTime}</h2>;
 };
 
 export default Clock;
