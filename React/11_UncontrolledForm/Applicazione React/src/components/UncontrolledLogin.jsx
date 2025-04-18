@@ -2,7 +2,8 @@ import React from "react";
 
 const UncontrolledLogin = () => {
     
-  const handleSubmit = (event) => {
+/*   
+    const handleSubmit = (event) => {
     event.preventDefault();
 
     const form = event.target;
@@ -13,7 +14,8 @@ const UncontrolledLogin = () => {
 
     console.log("Data from submit (DOM):", data);
     form.reset();
-  };
+  }; 
+*/
 
   const onLogin = (event) => {
     event.preventDefault();
