@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import ClickCounter from './components/ClickCounter'
 import NameList from './components/NameList'
@@ -7,7 +6,7 @@ import UsersList from './components/UsersList'
 import Timer from './components/Timer'
 
 function App() {
-  const names = ['Alice', 'Bob', 'Charlie', 'Diana']
+  const names = ['Alfonso', 'Christian', 'Mattia', 'Monica', 'Morena', 'Silvia']
   return (
     <>
       <h1>Esercizi Pasquali:</h1>
