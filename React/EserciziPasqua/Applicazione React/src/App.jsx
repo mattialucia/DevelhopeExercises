@@ -4,9 +4,11 @@ import NameList from './components/NameList'
 import MessageForm from './components/MessageForm'
 import UsersList from './components/UsersList'
 import Timer from './components/Timer'
+import Rubrica from './components/Rubrica'
 
 function App() {
-  const names = ['Alfonso', 'Christian', 'Mattia', 'Monica', 'Morena', 'Silvia']
+  const names = ['Niccolò', 'Alfonso', 'Christian', 'Mattia', 'Monica', 'Morena', 'Silvia']
+  
   return (
     <>
       <h1>Esercizi Pasquali:</h1>
@@ -15,6 +17,7 @@ function App() {
       <MessageForm />
       <UsersList />
       <Timer />
+      <Rubrica />
     </>
   )
 }
