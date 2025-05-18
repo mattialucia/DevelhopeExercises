@@ -1,12 +1,10 @@
 import React from "react";
-import useCounter from "./hooks/useCounter";
 import useForm from "./hooks/useForm";
 import useGithubUser from "./hooks/useGithubUser";
 import useCurrentLocation from "./hooks/useCurrentLocation";
 import Counter from "./components/Counter";
 
 const App = () => {
-  const { count, increment, decrement, reset } = useCounter();
   const { formData, handleChange } = useForm();
   const { user, loading, error, fetchUserData } = useGithubUser("mojombo");
   const { location, getCurrentLocation } = useCurrentLocation();
@@ -64,7 +62,7 @@ const App = () => {
         <button onClick={getCurrentLocation}>Get Location</button>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default App;
