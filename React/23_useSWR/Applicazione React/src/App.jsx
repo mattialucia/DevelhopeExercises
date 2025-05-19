@@ -6,7 +6,7 @@ import Counter from "./components/Counter";
 
 const App = () => {
   const { formData, handleChange } = useForm();
-  const { user, loading, error, fetchUserData } = useGithubUser("mojombo");
+  const { user, isLoading, error, refetch} = useGithubUser("mojombo");
   const { location, getCurrentLocation } = useCurrentLocation();
 
   return (
@@ -32,7 +32,7 @@ const App = () => {
       </div>
       <div>
         <h2>GitHub User</h2>
-        {loading ? (
+        {isLoading ? (
           <p>Loading...</p>
         ) : error ? (
           <p>Error: {error}</p>
@@ -42,7 +42,7 @@ const App = () => {
               <img src={user.avatar_url} alt={`${user.login}'s avatar`} width="100" />
               <h3>{user.name || "No Name Provided"}</h3>
               <p>{user.login}</p>
-              <button onClick={fetchUserData}>Refresh User</button>
+              <button onClick={refetch}>Refresh User</button>
             </div>
           )
         )}
